@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME Effect</title>
+
+    <a href='https://kr.123rf.com/profile_virtosmedia'>virtosmedia</a>
+    <a href='https://www.123rf.com/free-images/'>123RF Free Images</a>
+
+    <link rel="stylesheet" href="css/bg.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/tetris.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor">
+        <img src="img/game_mouse06.png" alt>
+    </div>
+    <header id="header">
+        <h1 class="header__title">WEBS GAME WORLD</h1>
+        <div class="time">2023년 4월 24일 09시 30분 15초</div>
+    </header>
+
+    <main>
+        <div class="icon__box">
+            <div class="icon1">
+                <img src="img/game_icon01.png" alt="뮤직">
+                <span>뮤직</span>
+            </div>
+            <div class="icon2">
+                <img src="img/game_icon02.png" alt="뮤직">
+                <span>테트리스</span>
+            </div>
+            <div class="icon3">
+                <img src="img/game_icon03.png" alt="뮤직">
+                <span>기타</span>
+            </div>
+            <div class="icon4">
+                <img src="img/game_icon04.png" alt="뮤직">
+                <span>기타</span>
+            </div>
+        </div> 
+
+        <!-- 뮤직 플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>Music Player</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/music_view01.png" alt="음악">
+                        </div>
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <p>노래 작가 이름</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio id="main-audio" src="audio/music_audio01.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:55</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>
+                                <i class="repeat" id="control-repeat" title="전체 반복"></i>
+                                <!-- <i class="repeat_one" id="control-repeat" title="한곡 반복"></i>
+                                <i class="shuffle" id="control-repeat" title="랜덤 반복"></i> -->
+                            </span>
+                            <span>
+                                <i class="prev" id="control-prev" title="이전곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="play" id="control-play" title="재생"></i>
+                            </span>
+                            <span>
+                                <i class="next" id="control-next" title="다음곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="list" id="control-list" title="재생 목록"></i>
+                            </span>
+                            <!-- <span class="stop">정지 반복</span> -->
+                        </div>
+                    </div>
+                    <div class="music__list">
+                        <h3>Music List<a href="#" class="close"></a></h3>
+                        <ul>
+                            <!-- <li class="active">
+                                <span class="img">
+                                    <img src="img/music_view01.png" alt="">
+                                </span>
+                                <span class="title">
+                                    <strong>1. Boom Bap Flick</strong>
+                                    <em>Quincas Moreira</em>
+                                </span>                                
+                                <span class="time">재생중</span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // 뮤직 플레이어 -->
+
+        <!-- 테트리스 -->
+        <div class="tetris__wrap">
+            <div class="tetris__header">
+                <h1>TETRIS GAME</h1>
+            </div>
+            <div class="tetris__start">
+                <h2>TETRIS GAME</h2>
+                <button type="button">GAME START</button>
+            </div>
+            <div class="tetris__game">
+                <div class="tetris__play">
+                    <div class="view">
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="tetris__info">
+                    <div class="tetris__text">
+                        <div class="tit">TIME : <em class="tetris__time"><span>0</span> 초</em></div>
+                        <div class="tit">SCORE : <em class="tetris__score"><span>0</span> 점</em></div>
+                    </div>
+                    <div class="tetris__method">
+                        <h3>조작 방법</h3>
+                        <div>&larr; : 왼쪽 이동</div>
+                        <div>&rarr; : 오른쪽 이동</div>
+                        <div>&darr; : 아래로 이동</div>
+                        <div>&uarr; : 모양 변경</div>
+                        <div>space : 아래로 한번에 이동</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tetris__result">
+                <h2>TETRIS GAME</h2>
+                <div class= "result">RESULT</div>
+                <div class="tit">TIME : <em class="tetris__time"><span>0</span> 초</em></div>
+                <div class="tit">SCORE : <em class="tetris__score"><span>0</span> 점</em></div>
+                <button type="button">RESTART!</button>
+            </div>
+            <div class="tetris__close"></div>
+        </div>
+        <!-- // 테트리스 -->
+    </main>
+
+    <footer id="footer">
+        <div class="info"></div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/tetris.js"></script>
+    <script>
+        $(".icon1").draggable({
+            containment: ".icon__box", scroll: false,
+            
+            start: function(){
+                $(".cursor img").attr("src", "img/game_mouse01.png")
+                $("#header").animate({backgroundColor: "red"})             
+            },
+            drag: function(){
+                $(".info").html("뮤직을 드래그 중입니다.") 
+            },
+            stop: function(){
+                $(".info").html("뮤직 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
+            }
+        });
+        $(".icon2").draggable({
+            containment: ".icon__box", scroll: false,
+            
+            start: function(){
+                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $("#header").animate({backgroundColor: "blue"})
+            },
+            drag: function(){
+                $(".info").html("파란 폴더를 드래그 중입니다.") 
+            },
+            stop: function(){
+                $(".info").html("파란 폴더 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
+            }
+        });
+        $(".icon3").draggable({
+            containment: ".icon__box", scroll: false,
+            
+            start: function(){
+                $(".cursor img").attr("src", "img/game_mouse03.png")
+                $("#header").animate({backgroundColor: "green"})
+            },
+            drag: function(){
+                $(".info").html("초록 폴더를 드래그 중입니다.") 
+            },
+            stop: function(){
+                $(".info").html("초록 폴더 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
+            }
+        });
+        $(".icon4").draggable({
+            containment: ".icon__box", scroll: false,
+            
+            start: function(){
+                $(".cursor img").attr("src", "img/game_mouse04.png")
+                $("#header").animate({backgroundColor: "#aeae00"})
+            },
+            drag: function(){
+                $(".info").html("노란 폴더를 드래그 중입니다.") 
+            },
+            stop: function(){
+                $(".info").html("노란 폴더 드래그가 끝났습니다.");
+                $("#header").animate({backgroundColor: "#f08e33"});
+                setInterval(printAgent, 5000);
+            }
+        });
+
+        $(".music__wrap").draggable({
+            scroll: false
+        });
+
+        $(".icon1").on("click", function(){
+            $("#header").animate({backgroundColor: "red"});
+            $(".cursor img").attr("src", "img/game_mouse01.png");
+            $(".music__wrap").css("display", "block");
+            $(".tetris__wrap").css("display", "none");
+            $("body").css("background-image", "url('img/gamebg01.jpg')");
+            $(".icon1 span").animate({backgroundColor: "red"});
+            $(".icon2 span").animate({backgroundColor: "#f08e33"});
+            $(".icon3 span").animate({backgroundColor: "#f08e33"});
+            $(".icon4 span").animate({backgroundColor: "#f08e33"});
+        });
+        $(".icon2").on("click", function(){
+            $("#header").animate({backgroundColor: "blue"});
+            $(".cursor img").attr("src", "img/game_mouse02.png");
+            $(".music__wrap").css("display", "none");
+            $(".tetris__wrap").css("display", "block");
+            $("body").css("background-image", "url('img/gamebg02.jpg')");
+            $(".icon1 span").animate({backgroundColor: "#f08e33"});
+            $(".icon2 span").animate({backgroundColor: "blue"});
+            $(".icon3 span").animate({backgroundColor: "#f08e33"});
+            $(".icon4 span").animate({backgroundColor: "#f08e33"});
+        });
+        $(".icon3").on("click", function(){
+            $("#header").animate({backgroundColor: "green"});
+            $(".cursor img").attr("src", "img/game_mouse03.png");
+            $(".music__wrap").css("display", "none");
+            $(".tetris__wrap").css("display", "none");
+            $("body").css("background-image", "url('img/gamebg03.jpg')");
+            $(".icon1 span").animate({backgroundColor: "#f08e33"});
+            $(".icon2 span").animate({backgroundColor: "#f08e33"});
+            $(".icon3 span").animate({backgroundColor: "green"});
+            $(".icon4 span").animate({backgroundColor: "#f08e33"});
+        });
+        $(".icon4").on("click", function(){
+            $("#header").animate({backgroundColor: "#aeae00"});
+            $(".cursor img").attr("src", "img/game_mouse04.png");
+            $(".music__wrap").css("display", "none");
+            $(".tetris__wrap").css("display", "none");
+            $("body").css("background-image", "url('img/gamebg01.jpg')");
+            $(".icon1 span").animate({backgroundColor: "#f08e33"});
+            $(".icon2 span").animate({backgroundColor: "#f08e33"});
+            $(".icon3 span").animate({backgroundColor: "#f08e33"});
+            $(".icon4 span").animate({backgroundColor: "#aeae00"});
+        });  
+
+        window.onload = function(){
+            window.addEventListener("mousemove", e => {
+                gsap.to(".cursor", {
+                    duration: 0, 
+                    left: e.pageX - 10,
+                    top: e.pageY - 10
+                })
+            });
+
+            // 시간 표현
+            printTime();
+
+            // 운영체제 정보
+            printAgent();
+        }
+
+         // 시간 표현
+        function printTime() {
+                let currentTime = new Date();
+                let year = currentTime.getFullYear();
+                let month = currentTime.getMonth()+1;
+                let date = currentTime.getDate();
+                let hours = currentTime.getHours().toString().padStart(2, '0');
+                let minutes = currentTime.getMinutes().toString().padStart(2, '0');
+                let seconds = currentTime.getSeconds().toString().padStart(2, '0');
+                $(".time").html(`${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`)
+            }
+        setInterval(printTime, 1000);
+
+        // 운영체제 정보
+        function printAgent(){
+            const info = document.querySelector(".info");
+            const screenInfo = navigator.userAgent.toString();
+            const screenWidth = window.screen.width;
+            const screegHeight = window.screen.height;
+
+            if(screenInfo.indexOf('Windows')>=0){
+                info.innerHTML = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            } else if(screenInfo.indexOf('Macintosh')>=0){
+                info.innerHTML = `현재 맥을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            } else if(screenInfo.indexOf('Android')>=0){
+                info.innerHTML = `현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            } else if(screenInfo.indexOf('iPhone')>=0){
+                info.innerHTML = `현재 아이폰을 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screegHeight} 입니다.`
+            }
+        };
+    </script>
+</body>
+</html>
